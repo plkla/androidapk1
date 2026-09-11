@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Costam</string>
+    <string name="text_przycisku_1">to jest cos</string>
+    <string name="text_przycisku_2">to jest cos tylko 2</string>
+    <string name="hi">HI!</string>
+    <string name="tekst_BYE">BYE</string>
 </resources>
