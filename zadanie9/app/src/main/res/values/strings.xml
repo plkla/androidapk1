@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">zadanie7</string>
-    <string name="platnosc">platnosc</string>
-    <string name="opakowanie">Opakowanie</string>
-    <string name="dostawa">Dostawa</string>
-    <string name="dodatkowe_us_ugi">Dodatkowe usługi</string>
+
+    <string name="nieb">nieb</string>
+    <string name="ziel">ziel</string>
+    <string name="czerw">czerw</string>
+    <string name="zadanie9">zadanie9</string>
 </resources>

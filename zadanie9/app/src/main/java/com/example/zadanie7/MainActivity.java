@@ -1,4 +1,6 @@
 package com.example.zadanie7;
+import static com.example.zadanie7.R.color.red;
+
 import android.widget.CheckBox;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
- int kwota = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,37 +33,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void policz(View view) {
-        boolean zaznaczone = ((CheckBox) view).isChecked();
+
+
+    public void zaznaczona(View view) {
+        TextView tekst1 = findViewById(R.id.tekst);
+        boolean zaznaczone = ((RadioButton) view).isChecked();
         int idCheckBox = view.getId();
-
-        if (idCheckBox == R.id.dostawa) {
-            if (zaznaczone) {
-                kwota += 10;
-            } else {
-                kwota -= 10;
-            }
-
-        } else if (idCheckBox == R.id.opakowanie) {
-            if (zaznaczone) {
-
-                kwota += 15;
-
-            } else {
-
-                kwota -= 15;
-
-            }
-
-        } else if (idCheckBox == R.id.platnosc) {
-            if (zaznaczone) {
-                kwota += 5;
-            } else {
-                kwota -= 5;
-            }
+        if (idCheckBox == R.id.czerwony) {
+            int color = ContextCompat.getColor(this, R.color.red);
+            tekst1.setTextColor(color);
+        } else if (idCheckBox == R.id.zielony) {
+            int color = ContextCompat.getColor(this, R.color.green);
+            tekst1.setTextColor(color);
+        } else if (idCheckBox == R.id.niebieski) {
+            int color = ContextCompat.getColor(this, R.color.blue);
+            tekst1.setTextColor(color);
         }
-
-        TextView textView = findViewById(R.id.tekst2);
-        textView.setText("Do zapłaty dodatkowo " + kwota + " złotych");
     }
 }

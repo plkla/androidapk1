@@ -8,50 +8,49 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/czerwony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/czerw"
+            android:onClick="zaznaczona" />
+
+        <RadioButton
+            android:id="@+id/zielony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ziel"
+            android:onClick="zaznaczona" />
+
+        <RadioButton
+            android:id="@+id/niebieski"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nieb"
+            android:onClick="zaznaczona" />
+
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/tekst1"
+        android:id="@+id/tekst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dodatkowe_us_ugi" />
-
-    <CheckBox
-        android:id="@+id/dostawa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="policz"
-        android:text="@string/dostawa"
-        android:textSize="11pt"
-        android:textColor="#D75323"/>
-
-    <CheckBox
-        android:id="@+id/opakowanie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="32dp"
-        android:onClick="policz"
-        android:text="@string/opakowanie"
-        android:textSize="12pt"
-        android:textColor="#1DBC34"/>
-
-
-    <CheckBox
-        android:id="@+id/platnosc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="policz"
-        android:text="@string/platnosc"
-        android:textSize="12pt"
-        android:textColor="#0000FF"/>
-
-    <TextView
-        android:id="@+id/tekst2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20pt"/>
+        android:text="Ten tekst zmieni kolor ;- )"
+        android:textSize="25sp" />
 
 
 
-  
+
+
+
+
+
+
+
 </LinearLayout>
