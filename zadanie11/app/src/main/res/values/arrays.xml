@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcje">
+
+        <item>czerwony</item>
+        <item>zielony</item>
+        <item>niebieski</item>
+        <item>żółty</item>
+
+
+    </string-array>
+</resources>
