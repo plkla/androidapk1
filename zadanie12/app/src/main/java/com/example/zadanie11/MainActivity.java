@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        lista = findViewById(R.id.lista);
+
         String[] opcje = {"Opcja 1", "Opcja 2", "Opcja 3"};
 
 
@@ -41,16 +41,24 @@ public class MainActivity extends AppCompatActivity {
         lista.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lista.setItemChecked(0, true);
     }
+    private static final String[] Miesiac = {
+            "Styczeń",
+            "Luty",
+            "Marzec",
+            "Kwiecień",
+            "Maj",
+            "Czerwiec",
+            "Lipiec",
+            "Sierpień",
+            "Wrzesień",
+            "Październik",
+            "Listopad",
+            "Grudzień"
 
+    };
     public void zaznaczona(View view) {
-        int pozycja = lista.getCheckedItemPosition();
 
-
-            String tekst = lista.getItemAtPosition(pozycja).toString();
-            TextView textView = findViewById(R.id.pole);
-            textView.setText(tekst);
-        }
-
+    };
 
     }
 
