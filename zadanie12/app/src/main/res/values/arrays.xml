@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Aplikacja12</string>
+    <string-array name="opcje">
+        <item>czerwony</item>
+        <item>zielony</item>
+        <item>niebieski</item>
+        <item>żółty</item>
+    </string-array>
+</resources>
