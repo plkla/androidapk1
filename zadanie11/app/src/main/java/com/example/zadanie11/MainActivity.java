@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         lista = findViewById(R.id.lista);
-        String[] opcje = getResources().getStringArray(R.array.opcje);
+        String[] opcje = {"Opcja 1", "Opcja 2", "Opcja 3"};
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
