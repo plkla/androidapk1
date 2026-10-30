@@ -2,18 +2,20 @@ package com.example.zadanie11;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView lista;
+    private static final String[] Miesiac = {
+            "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec",
+            "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,38 +29,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-
-        String[] opcje = {"Opcja 1", "Opcja 2", "Opcja 3"};
-
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
-                android.R.layout.simple_list_item_single_choice,
-                opcje
+                android.R.layout.simple_dropdown_item_1line,
+                Miesiac
         );
 
-        lista.setAdapter(adapter);
-        lista.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        lista.setItemChecked(0, true);
+        AutoCompleteTextView autoTextView = findViewById(R.id.tekst2);
+        autoTextView.setAdapter(adapter);
+
+        MultiAutoCompleteTextView multiAutoTextView = findViewById(R.id.tekst3);
+        multiAutoTextView.setAdapter(adapter);
+        multiAutoTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
     }
-    private static final String[] Miesiac = {
-            "Styczeń",
-            "Luty",
-            "Marzec",
-            "Kwiecień",
-            "Maj",
-            "Czerwiec",
-            "Lipiec",
-            "Sierpień",
-            "Wrzesień",
-            "Październik",
-            "Listopad",
-            "Grudzień"
-
-    };
-    public void zaznaczona(View view) {
-
-    };
-
-    }
-
+}
